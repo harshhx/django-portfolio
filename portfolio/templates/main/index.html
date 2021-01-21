@@ -1,7 +1,46 @@
 {%extends "main/base.html" %}
 
 {% block content %}
+{%include "main/nav.html" %}
+<div class="container">
+    <h1 class="center-align">Home page</h1>
+</div>
 
-<h1>Index page</h1>
+<div class="row center-align">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <!--<img class="materialboxed responsive-img " width="650" src="https://lh3.googleusercontent.com/LbKnwBdzt0fSUYHeN3RqnSxC610HAMBMDDRj-LZfquyaPrjEKS51jrHli8bYUAx1nSQjrtyRFLjYBOkuSvTta3OYJqVkwHjTxUSpW7WDXhYdbYO2yr-xazN2rKXWzjRX45meWDb_XOqtBNCFC4V6zSpFU5QRtJICalDrg5kfyA-CIgHZJQI4GND5DpPZRLveuwNd9ChLtiOtCWD4F1V2dU4yQMl3oIYg8D6-IuVST7f07w65j0MG-CMEo2b0A-r_hwXT48DHBqHx4yVz4YVGonASJW9pjJQIyxPlHKnN9RfRCNR2t3M5WTquJfDw02sWJ_AyPQ7DG0wC0fETjwW266j9VS0Q2DjDnB8Lfy_r63ttwILte-FuQRyIxeSaY3Tjd22w23XnHnD-qK5SjLANm7ET1WRIrVhISgFJjsGnouXXe7K_scrf72L4785gvuOsTT59SeaP555a-D_hSt2zCGSxlorl4Yh4tOveQv-0-xJNtWPX8VgLhgmnBE3gFQLibTHPjuW_d56ed1GOpP71D8ggwMUlbErb-t3wV5B0beLLVwU9oJ-l6l1ieNdV7rTSP_d0ufSskJa0RND0Xmv2ia4mkE7t4Tn-UrNMbsK3mD5Rcq9BvWuoeFcw2XVlZTT_xBYzzH68TlUmLowUYfMCSiNYDL6uu4q2wb5IALX1-xf2yLl6NiSICQ2p5pHZUg=w412-h833-no?authuser=1">-->
+                <span class="card-title">Harsh Gupta</span>
+                <p></p>
+            </div>
+            <div class="card-action">
+                <a href="#">Github</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">About Me</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque distinctio dolor ipsam voluptatum!
+                    Ad architecto assumenda aut, hic ipsum laborum magnam molestias mollitia nostrum possimus quas
+                    soluta tempora velit! Dolores.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
+
+{% block script  %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.materialboxed');
+        var instances = M.Materialbox.init(elems);
+    });
+</script>
+
+{%endblock %}
