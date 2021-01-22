@@ -1,0 +1,45 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+
+{% include "main/nav.html" %}
+
+<div class="container">
+    <h1 class="center-align">Projects</h1>
+    <div class="row">
+        <div class="col s12 m12 l12 center-align">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">My favourite projects</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, vitae.</p>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 center-align">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Space Invader</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias distinctio ea obcaecati officia optio quasi quibusdam repudiandae sed similique?</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">Confessions</i>Second</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis doloribus facere fuga fugiat hic libero neque nihil numquam ratione, saepe sit totam. Asperiores consequuntur magnam nesciunt nobis ullam. Error, voluptatibus!</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">login-signup</i>Third</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos est, ex fuga molestias nisi quas voluptatum. Atque deserunt dolor iste molestias officiis omnis, repellat sunt?</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+
+    {% block script %}
+    <script>  document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems);
+    });
+    </script>
+
+    {% endblock %}
